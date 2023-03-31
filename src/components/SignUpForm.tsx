@@ -23,8 +23,6 @@ export function SignUpForm() {
                 navigate('/');
                 window.location.reload();
             }
-            
-                
         }
     }
     
