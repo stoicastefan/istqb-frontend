@@ -12,10 +12,13 @@ export function Navbar() {
 
         if (username){
             return (
-                <>
-                {username}
-                <Nav className="">
-                        <Nav.Link to="/login" onClick={disconnectUser} as={NavLink}>Disconnect</Nav.Link>
+                < >
+                <Nav className=" rounded bg-secondary bg-gradient">
+                    <img className="p-1" src="..\src\assets\user2.png" alt="" style={{height: '42px'}}/>
+                    <span className="text-light fw-bolder nav-link">{username}</span>
+                </Nav>
+                <Nav className="ms-2">
+                        <Nav.Link className="fw-bolder text-light btn bg-danger" to="/login" onClick={disconnectUser} as={NavLink}>Disconnect</Nav.Link>
                 </Nav>
                 </>
             )
@@ -37,8 +40,8 @@ export function Navbar() {
     
     return (
         <NavbarBs sticky="top"  className="bg-white shadow-sm mb-3">
-            <NavbarBs.Brand style={{height: '50px'}} href="/"><img className="mh-100" style={{}} src="./src/assets/learning_logo.png" alt="" /></NavbarBs.Brand>
-            <Container className="justify-content-end">
+            <NavbarBs.Brand style={{height: '70px'}} href="/"><img className="mh-100" style={{}} src="./src/assets/learning_logo.png" alt="" /></NavbarBs.Brand>
+            <Container style={{}} className="mw-100 justify-content-end">
                 {isLoggedIn()}
             </Container>
             
